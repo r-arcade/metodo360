@@ -51,35 +51,40 @@ export function CheckItem({ children, light = false }) {
 }
 
 export function BlueprintMedia({ type = 'hero' }) {
-  const labels = {
-    hero: ['COMPOSIÇÃO ARQUITETÔNICA', 'Edifício residencial da identidade visual fornecida'],
-    sabrine: ['FOTO DA INSTRUTORA', 'Retrato profissional de Sabrine Carvalho'],
+  const media = {
+    hero: {
+      base: 'sabrine-hero',
+      alt: 'Sabrine Carvalho sorrindo, com uniforme profissional e capacete de vistoria',
+      width: 1200,
+      height: 1600,
+    },
+    sabrine: {
+      base: 'sabrine-about',
+      alt: 'Sabrine Carvalho com capacete de vistoria e tablet em mãos',
+      width: 1200,
+      height: 1704,
+    },
   }
-  const [label, description] = labels[type]
+  const currentMedia = media[type]
 
   return (
-    <div className={`blueprint-media blueprint-media--${type}`} role="img" aria-label={`${label}: ${description}.${type === 'sabrine' ? ' Material visual pendente.' : ''}`}>
-      {type === 'hero' && (
-        <picture className="blueprint-media__background">
-          <source srcSet="/brand/background-architecture.avif" type="image/avif" />
-          <source srcSet="/brand/background-architecture.webp" type="image/webp" />
-          <img src="/brand/social-preview.jpg" alt="" />
-        </picture>
-      )}
+    <div className={`blueprint-media blueprint-media--${type}`}>
+      <picture className="blueprint-media__background">
+        <source srcSet={`/brand/${currentMedia.base}.avif`} type="image/avif" />
+        <source srcSet={`/brand/${currentMedia.base}.webp`} type="image/webp" />
+        <img
+          src={`/brand/${currentMedia.base}.jpg`}
+          alt={currentMedia.alt}
+          width={currentMedia.width}
+          height={currentMedia.height}
+          loading={type === 'hero' ? 'eager' : 'lazy'}
+          fetchPriority={type === 'hero' ? 'high' : 'auto'}
+        />
+      </picture>
       <span className="blueprint-media__axis blueprint-media__axis--x" />
       <span className="blueprint-media__axis blueprint-media__axis--y" />
       <span className="blueprint-media__corner blueprint-media__corner--a" />
       <span className="blueprint-media__corner blueprint-media__corner--b" />
-      {type !== 'hero' && (
-        <div className="blueprint-media__content">
-          <svg aria-hidden="true" viewBox="0 0 48 48">
-            <path d="M7 39V9h34v30H7Z" /><path d="m13 33 8-9 6 6 4-4 10 10M31 18a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
-          </svg>
-          <strong>{label}</strong>
-          <span>{description}</span>
-          <small>Material pendente</small>
-        </div>
-      )}
       {type === 'hero' && (
         <div className="blueprint-media__track" aria-hidden="true">
           <div><span>01</span><strong>Técnica</strong></div>

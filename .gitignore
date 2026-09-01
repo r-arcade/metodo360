@@ -7,3 +7,6 @@ dist
 !.env.example
 
 .vercel
+
+# Fotografias originais locais; o site usa as versões otimizadas em public/brand.
+identidade-visual/img_engenheira/
