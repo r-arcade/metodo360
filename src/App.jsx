@@ -25,7 +25,7 @@ function Hero() {
           <Eyebrow>Método Vistoria 360</Eyebrow>
           <h1 id="hero-title">A visão completa da vistoria de imóvel novo.</h1>
           <p className="hero__lead">O curso definitivo para engenheiros e arquitetos que querem dominar a vistoria de imóveis novos.</p>
-          <p className="hero__body">Aprenda, com um método construído a partir da experiência de mais de mil vistorias reais, tudo o que você precisa para atuar com segurança — da técnica e prática de campo à captação de clientes, posicionamento, precificação e entrega do relatório.</p>
+          <p className="hero__body">Aprenda, com um método construído a partir da experiência de mais de 1.500 vistorias reais, tudo o que você precisa para atuar com segurança — da técnica e prática de campo à captação de clientes, posicionamento, precificação e entrega do relatório.</p>
           <p className="hero__promise"><span aria-hidden="true">↳</span> Torne-se referência em vistoria de imóvel novo na sua cidade.</p>
           <CTA eventName="hero_cta_click" className="hero-button">Quero conhecer o método</CTA>
           <ul className="micro-benefits" aria-label="Informações do curso">
@@ -37,7 +37,7 @@ function Hero() {
         <div className="hero__visual">
           <BlueprintMedia />
           <div className="hero__credential">
-            <strong>+1.000</strong>
+            <strong>+1.500</strong>
             <span>vistorias reais<br />na base do método</span>
           </div>
         </div>
@@ -51,7 +51,7 @@ function TrustStrip() {
   return (
     <aside className="trust-strip" aria-label="Credenciais e informações principais do Método Vistoria 360">
       <Container className="trust-strip__grid">
-        <div><strong>+1.000</strong><span>vistorias reais realizadas</span></div>
+        <div><strong>+1.500</strong><span>vistorias reais realizadas</span></div>
         <div><strong>Desde 2022</strong><span>atuação prática em Manaus</span></div>
         <div><strong>10 módulos</strong><span>da técnica ao relatório</span></div>
         <div><strong>1 ano</strong><span>de acesso ao conteúdo</span></div>
@@ -254,7 +254,7 @@ function About() {
         <div className="about-copy">
           <Eyebrow>Sobre Sabrine Carvalho</Eyebrow>
           <h2 id="about-title">De engenheira a empreendedora através da vistoria.</h2>
-          <p>Sabrine Carvalho é engenheira civil especialista em vistoria de imóveis novos. Desde 2022, atua de forma pioneira em Manaus e já realizou mais de mil vistorias.</p>
+          <p>Sabrine Carvalho é engenheira civil especialista em vistoria de imóveis novos. Desde 2022, atua de forma pioneira em Manaus e já realizou mais de 1.500 vistorias.</p>
           <p>Ao longo dessa trajetória, transformou a vistoria em uma porta de entrada para o empreendedorismo, construiu uma marca profissional, conquistou clientes através do posicionamento digital e desenvolveu uma metodologia baseada na prática real.</p>
           <blockquote>“A vistoria foi a forma que encontrei de entrar no empreendedorismo — e deu muito certo.”</blockquote>
           <div className="about-signature"><span>Experiência real</span><span>Prática de campo</span><span>Visão de negócio</span></div>
@@ -274,7 +274,7 @@ function SocialProof() {
             <h2 id="proof-title">Quem acompanha o trabalho percebe a diferença antes mesmo de contratar.</h2>
           </div>
           <div className="proof-numbers">
-            <p><strong>+1.000</strong><span>vistorias realizadas</span></p>
+            <p><strong>+1.500</strong><span>vistorias realizadas</span></p>
             <p><strong>2022</strong><span>início da atuação</span></p>
             <p><strong>360°</strong><span>visão do serviço</span></p>
           </div>
