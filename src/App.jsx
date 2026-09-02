@@ -5,6 +5,8 @@ import { FAQList } from './components/FAQ'
 import { BlueprintMedia, CheckItem, Container, CTA, Eyebrow, Section } from './components/UI'
 import { PRODUCT } from './config'
 import {
+  audience,
+  experienceSignals,
   faqs,
   inclusions,
   journey,
@@ -25,7 +27,7 @@ function Hero() {
           <Eyebrow>Método Vistoria 360</Eyebrow>
           <h1 id="hero-title">A visão completa da vistoria de imóvel novo.</h1>
           <p className="hero__lead">O curso definitivo para engenheiros e arquitetos que querem dominar a vistoria de imóveis novos.</p>
-          <p className="hero__body">Aprenda, com um método construído a partir da experiência de mais de 1.500 vistorias reais, tudo o que você precisa para atuar com segurança — da técnica e prática de campo à captação de clientes, posicionamento, precificação e entrega do relatório.</p>
+          <p className="hero__body">Aprenda, com um método construído a partir da experiência de quem já fez mais de 1500 vistorias reais, tudo o que você precisa para atuar com segurança — da técnica e prática de campo à captação de clientes, posicionamento, precificação e entrega do relatório.</p>
           <p className="hero__promise"><span aria-hidden="true">↳</span> Torne-se referência em vistoria de imóvel novo na sua cidade.</p>
           <CTA eventName="hero_cta_click" className="hero-button">Quero conhecer o método</CTA>
           <ul className="micro-benefits" aria-label="Informações do curso">
@@ -37,7 +39,7 @@ function Hero() {
         <div className="hero__visual">
           <BlueprintMedia />
           <div className="hero__credential">
-            <strong>+1.500</strong>
+            <strong>+ 1500</strong>
             <span>vistorias reais<br />na base do método</span>
           </div>
         </div>
@@ -51,12 +53,35 @@ function TrustStrip() {
   return (
     <aside className="trust-strip" aria-label="Credenciais e informações principais do Método Vistoria 360">
       <Container className="trust-strip__grid">
-        <div><strong>+1.500</strong><span>vistorias reais realizadas</span></div>
-        <div><strong>Desde 2022</strong><span>atuação prática em Manaus</span></div>
+        <div><strong>+ 1500</strong><span>vistorias reais realizadas</span></div>
+        <div><strong>Materiais exclusivos</strong><span>p/ download</span></div>
         <div><strong>10 módulos</strong><span>da técnica ao relatório</span></div>
         <div><strong>1 ano</strong><span>de acesso ao conteúdo</span></div>
       </Container>
     </aside>
+  )
+}
+
+function RealExperience() {
+  return (
+    <Section id="experiencia" tone="forest" className="experience" labelledBy="experience-title">
+      <Container className="experience-grid">
+        <div className="experience-copy">
+          <Eyebrow light>Experiência real</Eyebrow>
+          <h2 id="experience-title">Um método construído a partir de mais de 1500 vistorias reais.</h2>
+          <p>O Método Vistoria 360 não nasceu de teoria acumulada em livros. Ele foi construído a partir do dia a dia.</p>
+        </div>
+        <div className="experience-evidence">
+          <ul>
+            {experienceSignals.map((item, index) => (
+              <li key={item}><span>{String(index + 1).padStart(2, '0')}</span>{item}</li>
+            ))}
+          </ul>
+          <p>A proposta é ensinar o que realmente acontece em uma vistoria de imóvel novo — inclusive aquilo que normalmente ninguém explica.</p>
+          <strong>Você aprende com quem vive esse mercado todos os dias.</strong>
+        </div>
+      </Container>
+    </Section>
   )
 }
 
@@ -243,52 +268,46 @@ function Materials() {
   )
 }
 
+function Audience() {
+  return (
+    <Section id="para-quem" tone="mist" labelledBy="audience-title">
+      <Container>
+        <div className="section-heading section-heading--split audience-heading">
+          <div>
+            <Eyebrow>Para quem é</Eyebrow>
+            <h2 id="audience-title">O Método Vistoria 360 é para você que…</h2>
+          </div>
+          <p>Uma formação para profissionais que querem transformar conhecimento técnico em uma atuação estruturada.</p>
+        </div>
+        <ul className="audience-list">
+          {audience.map((item, index) => (
+            <li key={item}><span>{String(index + 1).padStart(2, '0')}</span><strong>{item}</strong></li>
+          ))}
+        </ul>
+      </Container>
+    </Section>
+  )
+}
+
 function About() {
   return (
     <Section id="sabrine" labelledBy="about-title">
       <Container className="about-grid">
         <div className="about-visual">
           <BlueprintMedia type="sabrine" />
-          <div className="about-stat"><strong>Desde 2022</strong><span>atuando de forma pioneira em Manaus</span></div>
+          <div className="about-stat"><strong>Materiais exclusivos</strong><span>p/ download</span></div>
         </div>
         <div className="about-copy">
           <Eyebrow>Sobre Sabrine Carvalho</Eyebrow>
           <h2 id="about-title">De engenheira a empreendedora através da vistoria.</h2>
-          <p>Sabrine Carvalho é engenheira civil especialista em vistoria de imóveis novos. Desde 2022, atua de forma pioneira em Manaus e já realizou mais de 1.500 vistorias.</p>
-          <p>Ao longo dessa trajetória, transformou a vistoria em uma porta de entrada para o empreendedorismo, construiu uma marca profissional, conquistou clientes através do posicionamento digital e desenvolveu uma metodologia baseada na prática real.</p>
-          <blockquote>“A vistoria foi a forma que encontrei de entrar no empreendedorismo — e deu muito certo.”</blockquote>
+          <p>Sabrine Carvalho é engenheira civil especialista em vistoria de imóveis novos. Desde 2022, atua de forma pioneira em Manaus e já realizou mais de 1500 vistorias.</p>
+          <p>Ao longo dessa trajetória, transformou a vistoria em uma porta de entrada para o empreendedorismo.</p>
+          <blockquote>
+            <p>“A vistoria foi a forma que encontrei de entrar no empreendedorismo — e deu muito certo. Conquistei meu primeiro carro 0 km e meu apartamento na planta, tudo através do serviço de vistoria. Com criatividade, o uso certo das redes sociais e um atendimento e uma entrega diferenciados para os meus clientes, me tornei referência nesse serviço.</p>
+            <p>Agora, preparei este curso entregando tudo o que funcionou para mim ao longo desses 4 anos e acredito que também vai funcionar para você!”</p>
+          </blockquote>
           <div className="about-signature"><span>Experiência real</span><span>Prática de campo</span><span>Visão de negócio</span></div>
         </div>
-      </Container>
-    </Section>
-  )
-}
-
-function SocialProof() {
-  return (
-    <Section id="provas" tone="mist" labelledBy="proof-title">
-      <Container>
-        <div className="proof-heading">
-          <div>
-            <Eyebrow>Reconhecimento construído na prática</Eyebrow>
-            <h2 id="proof-title">Quem acompanha o trabalho percebe a diferença antes mesmo de contratar.</h2>
-          </div>
-          <div className="proof-numbers">
-            <p><strong>+1.500</strong><span>vistorias realizadas</span></p>
-            <p><strong>2022</strong><span>início da atuação</span></p>
-            <p><strong>360°</strong><span>visão do serviço</span></p>
-          </div>
-        </div>
-        <div className="proof-placeholders" aria-label="Área reservada para provas sociais reais">
-          {[1, 2, 3].map((item) => (
-            <article key={item}>
-              <div><span className="skeleton-line skeleton-line--short" /><span className="skeleton-line" /><span className="skeleton-line" /><span className="skeleton-line skeleton-line--medium" /></div>
-              <p>Inserir feedback ou print real</p>
-              <small>Material pendente · {String(item).padStart(2, '0')}</small>
-            </article>
-          ))}
-        </div>
-        <div className="proof-cta"><p>Experiência de campo que se transforma em método.</p><CTA variant="secondary" className="proof-button">Quero fazer parte</CTA></div>
       </Container>
     </Section>
   )
@@ -384,15 +403,16 @@ export default function App() {
       <main id="main-content">
         <Hero />
         <TrustStrip />
+        <RealExperience />
+        <Method />
         <Opportunity />
         <Problem />
-        <Method />
         <Journey />
         <CourseContent />
         <Practice />
         <Materials />
+        <Audience />
         <About />
-        <SocialProof />
         <Offer />
         <Guarantee />
         <FrequentlyAskedQuestions />

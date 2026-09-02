@@ -4,7 +4,7 @@ export const PRODUCT = {
   installments: '10x de R$ 49,70 sem juros',
   accessDuration: '1 ano',
   guaranteeDays: 7,
-  support: 'Grupo de WhatsApp + suporte por e-mail',
+  support: 'Grupo de suporte no WhatsApp',
 }
 
 // Pendente: substituir somente este valor quando o checkout da Hotmart estiver definido.
