@@ -60,9 +60,9 @@ export function BlueprintMedia({ type = 'hero' }) {
     },
     sabrine: {
       base: 'sabrine-about',
-      alt: 'Sabrine Carvalho com capacete de vistoria e tablet em mãos',
+      alt: 'Sabrine Carvalho com capacete de vistoria e braços cruzados',
       width: 1200,
-      height: 1704,
+      height: 1600,
     },
   }
   const currentMedia = media[type]
