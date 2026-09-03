@@ -36,16 +36,16 @@ export const experienceSignals = [
 ]
 
 export const modules = [
-  'Fundamentos da Vistoria de Imóvel Novo',
-  'Normas e ART: o Lado Técnico e Formal da Vistoria',
-  'Vistoria Além da Parte Técnica',
-  'Organização Profissional',
-  'Clientes: Captação e Atendimento',
-  'Instagram e Posicionamento de Mercado',
-  'Precificação',
-  'Prática de Campo: A Vistoria Real',
-  'O Relatório Perfeito',
-  'Encerramento',
+  { number: '00', title: 'Checkpoint Zero' },
+  { number: '01', title: 'Fundamentos da Vistoria de Imóvel Novo' },
+  { number: '02', title: 'Organização Profissional e Rotina do Vistoriador' },
+  { number: '03', title: 'Normas, ART e Procedimentos Formais' },
+  { number: '04', title: 'O Que Está Além da Vistoria' },
+  { number: '05', title: 'Captação e Atendimento ao Cliente' },
+  { number: '06', title: 'Instagram e Posicionamento de Mercado' },
+  { number: '07', title: 'Precificação Profissional' },
+  { number: '08', title: 'Prática de Campo e Vistoria Real' },
+  { number: '09', title: 'O Relatório Perfeito' },
 ]
 
 export const practicalClasses = [

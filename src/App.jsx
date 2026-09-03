@@ -199,11 +199,24 @@ function CourseContent() {
           <p>Dos fundamentos à atuação profissional completa. Os módulos mostram como a vistoria funciona como serviço, profissão e oportunidade de negócio.</p>
         </div>
         <div className="modules-grid">
-          {modules.map((module, index) => (
-            <article className={`module-card ${index === 7 ? 'module-card--featured' : ''}`} key={module}>
-              <div className="module-card__number"><span>Módulo</span><strong>{String(index + 1).padStart(2, '0')}</strong></div>
-              <h3>{module}</h3>
-              {index === 7 && <small>Prática de campo</small>}
+          {modules.map((module) => (
+            <article className={`module-card ${module.number === '08' ? 'module-card--featured' : ''}`} key={module.number}>
+              <picture className="module-card__media">
+                <source srcSet={`/brand/modules/module-${module.number}.webp`} type="image/webp" />
+                <img
+                  src={`/brand/modules/module-${module.number}.png`}
+                  alt={`Módulo ${Number(module.number)} — ${module.title}`}
+                  width="410"
+                  height="228"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <div className="module-card__caption">
+                <span>Módulo {module.number}</span>
+                <h3>{module.title}</h3>
+                {module.number === '08' && <small>Módulo em destaque</small>}
+              </div>
             </article>
           ))}
         </div>
