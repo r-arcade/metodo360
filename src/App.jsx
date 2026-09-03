@@ -202,7 +202,6 @@ function CourseContent() {
           {modules.map((module) => (
             <article className={`module-card ${module.number === '08' ? 'module-card--featured' : ''}`} key={module.number}>
               <picture className="module-card__media">
-                <source srcSet={`/brand/modules/module-${module.number}.webp`} type="image/webp" />
                 <img
                   src={`/brand/modules/module-${module.number}.png`}
                   alt={`Módulo ${Number(module.number)} — ${module.title}`}

@@ -55,14 +55,14 @@ export function BlueprintMedia({ type = 'hero' }) {
     hero: {
       base: 'sabrine-hero',
       alt: 'Sabrine Carvalho sorrindo, com uniforme profissional e capacete de vistoria',
-      width: 1200,
-      height: 1600,
+      width: 1800,
+      height: 2400,
     },
     sabrine: {
       base: 'sabrine-about',
       alt: 'Sabrine Carvalho com capacete de vistoria e braços cruzados',
-      width: 1200,
-      height: 1600,
+      width: 1800,
+      height: 2400,
     },
   }
   const currentMedia = media[type]

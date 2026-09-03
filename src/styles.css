@@ -571,10 +571,14 @@ h3 { letter-spacing: -0.02em; }
   .site-footer { padding-bottom: 50px; }
 }
 
+@media (min-width: 960px) {
+  .modules-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .module-card:last-child { grid-column: 2; }
+}
+
 @media (min-width: 1080px) {
   .market-card { min-height: 260px; padding: 34px; }
   .market-card > span { margin-bottom: 60px; }
-  .modules-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .module-card h3 { font-size: 1rem; }
 }
 
