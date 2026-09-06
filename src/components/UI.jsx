@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { getCheckoutUrl } from '../utils/checkout'
 import { trackEvent } from '../utils/tracking'
 
@@ -22,12 +23,35 @@ export function Eyebrow({ children, light = false }) {
 }
 
 export function CTA({ children, href: destination, eventName = 'checkout_click', variant = 'primary', className = '' }) {
+  const buttonRef = useRef(null)
+  const [attention, setAttention] = useState(false)
   const href = destination ?? getCheckoutUrl()
   const external = href.startsWith('http')
 
+  useEffect(() => {
+    const button = buttonRef.current
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (!button || !('IntersectionObserver' in window)) return
+    const fixed = className.includes('mobile-sticky-cta') || className.includes('header-cta')
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= .7) {
+        if (!motion.matches) setAttention(true)
+        observer.disconnect()
+      }
+    }, { threshold: .7, rootMargin: fixed ? '0px' : '-84px 0px -80px 0px' })
+    observer.observe(button)
+    return () => observer.disconnect()
+  }, [className])
+
   return (
     <a
-      className={`button button--${variant} ${className}`.trim()}
+      ref={buttonRef}
+      className={`button button--${variant} ${className} ${attention ? 'button--attention' : ''}`.trim()}
+      onAnimationEnd={(event) => {
+        if (event.animationName === 'button-arrival') setAttention(false)
+      }}
+      onPointerDown={() => setAttention(false)}
+      onFocus={() => setAttention(false)}
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
