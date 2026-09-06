@@ -503,6 +503,14 @@ h3 { letter-spacing: -0.02em; }
 
 .mobile-sticky-cta { position: fixed; z-index: 90; right: 12px; bottom: 12px; left: 12px; min-height: 52px; box-shadow: 0 12px 34px rgba(13,42,40,.28); }
 
+@media (max-width: 559px) {
+  .market-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
+  .market-card__media { border-radius: 24px 24px 2px 2px; }
+  .market-card__copy { padding-top: 16px; }
+  .market-card h3 { min-height: 2.5em; margin-bottom: 10px; font-size: clamp(.95rem, 4vw, 1.125rem); line-height: 1.25; }
+  .market-card p { font-size: .875rem; line-height: 1.6; }
+}
+
 @media (min-width: 560px) {
   .container { width: min(calc(100% - 64px), var(--container)); }
   .hero-button, .method-button, .final-button { width: auto; }
