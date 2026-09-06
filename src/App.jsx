@@ -15,7 +15,6 @@ import {
   pillars,
   practicalClasses,
   professionalQuestions,
-  toolkits,
 } from './data'
 import { trackEvent } from './utils/tracking'
 
@@ -256,6 +255,23 @@ function Practice() {
 }
 
 function Materials() {
+  const materialShowcases = [
+    {
+      number: '01',
+      title: 'Combo de documentos do vistoriador',
+      image: 'combo-docs-vistoriador',
+      alt: 'Coleção de documentos do vistoriador, incluindo regulamento, guia pré-vistoria, perguntas essenciais, glossário técnico e mapa mental dos cômodos',
+      note: 'Documentos prontos para baixar, adaptar e aplicar.',
+    },
+    {
+      number: '02',
+      title: 'Materiais exclusivos do método',
+      image: 'materiais-exclusivos-metodo',
+      alt: 'Coleção de materiais exclusivos do Método Vistoria 360 com guias práticos das principais normas técnicas',
+      note: 'Conteúdos exclusivos, não comercializados separadamente.',
+    },
+  ]
+
   return (
     <Section id="materiais" tone="sand" labelledBy="materials-title">
       <Container>
@@ -265,14 +281,28 @@ function Materials() {
           <p>Ferramentas para aplicar o método com mais segurança e menos improviso.</p>
         </div>
         <div className="toolkits-grid">
-          {toolkits.map((group, index) => (
-            <article className={`toolkit-card ${index === 1 ? 'toolkit-card--accent' : ''}`} key={group.eyebrow}>
+          {materialShowcases.map((material, index) => (
+            <article className={`toolkit-card ${index === 1 ? 'toolkit-card--accent' : ''}`} key={material.title}>
               <div className="toolkit-card__header">
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <h3>{group.eyebrow}</h3>
+                <span>{material.number}</span>
+                <h3>{material.title}</h3>
               </div>
-              <ul>{group.items.map((item) => <CheckItem key={item}>{item}</CheckItem>)}</ul>
-              <p>{index === 0 ? 'Baixe, adapte e aplique.' : 'Conteúdos não comercializados separadamente.'}</p>
+              <picture className="toolkit-card__media">
+                <source srcSet={`/brand/materials/${material.image}.avif`} type="image/avif" />
+                <source srcSet={`/brand/materials/${material.image}.webp`} type="image/webp" />
+                <img
+                  src={`/brand/materials/${material.image}.png`}
+                  alt={material.alt}
+                  width="1448"
+                  height="1086"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <div className="toolkit-card__footer">
+                <p>{material.note}</p>
+                <span>Incluso no curso</span>
+              </div>
             </article>
           ))}
         </div>

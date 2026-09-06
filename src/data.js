@@ -69,17 +69,6 @@ export const audience = [
   'Deseja empreender através da própria profissão',
 ]
 
-export const toolkits = [
-  {
-    eyebrow: 'Combo de documentos do vistoriador',
-    items: ['Modelo de procuração', 'Regulamento e guia pré-vistoria', 'Modelo de proposta', 'Planilha de controle', 'Scripts de WhatsApp e abordagem', 'Materiais de apoio operacional'],
-  },
-  {
-    eyebrow: 'Materiais exclusivos do método',
-    items: ['Resumo das principais normas', 'Material sobre tolerâncias construtivas', 'Principais dúvidas dos clientes', 'Conteúdos técnicos complementares', 'Materiais da vistoria prática', 'Estrutura de relatório e ideias de conteúdo'],
-  },
-]
-
 export const inclusions = [
   'Curso completo e módulos gravados', 'Aulas práticas e vistoria real',
   'Materiais e documentos para download', 'Planilhas, scripts e modelos',

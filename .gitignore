@@ -13,3 +13,6 @@ identidade-visual/img_engenheira/
 
 # Artes originais dos módulos; o site usa cópias otimizadas em public/brand/modules.
 identidade-visual/modulos/
+
+# Artes originais dos materiais; o site usa cópias otimizadas em public/brand/materials.
+identidade-visual/materiais-ferramentas/
