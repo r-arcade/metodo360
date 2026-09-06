@@ -16,3 +16,6 @@ identidade-visual/modulos/
 
 # Artes originais dos materiais; o site usa cópias otimizadas em public/brand/materials.
 identidade-visual/materiais-ferramentas/
+
+# Imagens originais da seção de atuação; o site usa cópias em public/brand/opportunity.
+identidade-visual/sessao-atuacao-expansao/

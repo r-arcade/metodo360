@@ -1,8 +1,32 @@
 export const marketSignals = [
-  { number: '01', title: 'Mais empreendimentos', text: 'Novos condomínios continuam sendo entregues em grande volume.' },
-  { number: '02', title: 'Mais proprietários', text: 'Cada entrega reúne dezenas ou centenas de imóveis a serem recebidos.' },
-  { number: '03', title: 'Mais orientação técnica', text: 'O proprietário busca segurança ao receber um dos seus maiores patrimônios.' },
-  { number: '04', title: 'Mais espaço profissional', text: 'Engenheiros e arquitetos podem construir uma autoridade especializada e local.' },
+  {
+    title: 'Mais empreendimentos',
+    text: 'Novos condomínios continuam sendo entregues em grande volume.',
+    image: 'mais-empreendimentos',
+    fallback: 'png',
+    alt: 'Empreendimento residencial moderno com vários condomínios ao fundo',
+  },
+  {
+    title: 'Mais proprietários',
+    text: 'Cada entrega reúne dezenas ou centenas de imóveis a serem recebidos.',
+    image: 'mais-proprietarios',
+    fallback: 'png',
+    alt: 'Proprietário recebendo as chaves de um novo imóvel',
+  },
+  {
+    title: 'Mais orientação técnica',
+    text: 'O proprietário busca segurança ao receber um dos seus maiores patrimônios.',
+    image: 'mais-orientacao-tecnica',
+    fallback: 'png',
+    alt: 'Checklist de inspeção sobre uma planta baixa, acompanhado de capacete e ferramentas técnicas',
+  },
+  {
+    title: 'Mais espaço profissional',
+    text: 'Engenheiros e arquitetos podem construir uma autoridade especializada e local.',
+    image: 'mais-espaco-profissional',
+    fallback: 'jpeg',
+    alt: 'Profissional de engenharia realizando a vistoria da esquadria de um imóvel novo',
+  },
 ]
 
 export const professionalQuestions = [

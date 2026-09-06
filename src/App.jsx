@@ -86,7 +86,7 @@ function RealExperience() {
 
 function Opportunity() {
   return (
-    <Section id="oportunidade" labelledBy="opportunity-title">
+    <Section id="oportunidade" className="opportunity" labelledBy="opportunity-title">
       <Container>
         <div className="section-heading section-heading--split">
           <div>
@@ -96,11 +96,25 @@ function Opportunity() {
           <p>A cada nova entrega, existe um proprietário prestes a receber um dos maiores patrimônios da própria vida — e cresce a necessidade de um profissional capacitado para acompanhá-lo.</p>
         </div>
         <div className="market-grid">
-          {marketSignals.map((item) => (
-            <article className="market-card" key={item.number}>
-              <span>{item.number}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+          {marketSignals.map((item, index) => (
+            <article className={`market-card ${index === marketSignals.length - 1 ? 'market-card--apex' : ''}`} key={item.title}>
+              <picture className="market-card__media">
+                <source srcSet={`/brand/opportunity/${item.image}.avif`} type="image/avif" />
+                <source srcSet={`/brand/opportunity/${item.image}.webp`} type="image/webp" />
+                <img
+                  src={`/brand/opportunity/${item.image}.${item.fallback}`}
+                  alt={item.alt}
+                  width="1254"
+                  height="1254"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <div className="market-card__copy">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+              {index < marketSignals.length - 1 && <span className="market-card__connector" aria-hidden="true">→</span>}
             </article>
           ))}
         </div>
