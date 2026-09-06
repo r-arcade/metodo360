@@ -504,6 +504,13 @@ h3 { letter-spacing: -0.02em; }
 .mobile-sticky-cta { position: fixed; z-index: 90; right: 12px; bottom: 12px; left: 12px; min-height: 52px; box-shadow: 0 12px 34px rgba(13,42,40,.28); }
 
 @media (max-width: 559px) {
+  .practice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .practice-card { min-width: 0; min-height: 0; padding: 12px; }
+  .practice-card__top { gap: 6px; margin-bottom: 20px; }
+  .practice-card__top > span { width: 32px; height: 32px; flex-shrink: 0; }
+  .practice-card__top small { white-space: nowrap; }
+  .practice-card h3 { min-height: 2.6em; margin-bottom: 10px; font-size: 1rem; line-height: 1.3; }
+  .practice-card p { font-size: .875rem; line-height: 1.55; }
   .market-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
   .market-card__media { border-radius: 24px 24px 2px 2px; }
   .market-card__copy { padding-top: 16px; }
