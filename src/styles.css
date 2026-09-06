@@ -363,7 +363,7 @@ h3 { letter-spacing: -0.02em; }
 .journey-board__legend span::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
 .journey-close { margin: 34px 0 0; text-align: center; }
 
-.modules-grid { display: grid; gap: 18px; }
+.modules-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .module-card { position: relative; display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line); background: var(--white); box-shadow: 0 10px 30px rgba(16,41,39,.05); transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
 .module-card:hover { border-color: rgba(31,87,87,.32); box-shadow: 0 18px 42px rgba(16,41,39,.1); transform: translateY(-2px); }
 .module-card__media { display: block; flex-shrink: 0; aspect-ratio: 16 / 9; overflow: hidden; background: var(--forest-deep); }
@@ -504,6 +504,9 @@ h3 { letter-spacing: -0.02em; }
 .mobile-sticky-cta { position: fixed; z-index: 90; right: 12px; bottom: 12px; left: 12px; min-height: 52px; box-shadow: 0 12px 34px rgba(13,42,40,.28); }
 
 @media (max-width: 559px) {
+  .modules-grid { gap: 12px; }
+  .module-card__caption { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 12px; }
+  .module-card h3 { font-size: .875rem; overflow-wrap: anywhere; }
   .practice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .practice-card { min-width: 0; min-height: 0; padding: 12px; }
   .practice-card__top { gap: 6px; margin-bottom: 20px; }
@@ -637,8 +640,7 @@ h3 { letter-spacing: -0.02em; }
 }
 
 @media (min-width: 960px) {
-  .modules-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .module-card:last-child { grid-column: 2; }
+  .modules-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 }
 
 @media (min-width: 1080px) {

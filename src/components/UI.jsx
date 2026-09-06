@@ -21,8 +21,8 @@ export function Eyebrow({ children, light = false }) {
   return <p className={`eyebrow ${light ? 'eyebrow--light' : ''}`}>{children}</p>
 }
 
-export function CTA({ children, eventName = 'checkout_click', variant = 'primary', className = '' }) {
-  const href = getCheckoutUrl()
+export function CTA({ children, href: destination, eventName = 'checkout_click', variant = 'primary', className = '' }) {
+  const href = destination ?? getCheckoutUrl()
   const external = href.startsWith('http')
 
   return (

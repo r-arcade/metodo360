@@ -28,7 +28,7 @@ function Hero() {
           <p className="hero__lead">O curso definitivo para engenheiros e arquitetos que querem dominar a vistoria de imóveis novos.</p>
           <p className="hero__body">Aprenda, com um método construído a partir da experiência de quem já fez mais de 1500 vistorias reais, tudo o que você precisa para atuar com segurança — da técnica e prática de campo à captação de clientes, posicionamento, precificação e entrega do relatório.</p>
           <p className="hero__promise"><span aria-hidden="true">↳</span> Torne-se referência em vistoria de imóvel novo na sua cidade.</p>
-          <CTA eventName="hero_cta_click" className="hero-button">Quero conhecer o método</CTA>
+          <CTA href="#investimento" eventName="hero_cta_click" className="hero-button">Quero conhecer o método</CTA>
           <ul className="micro-benefits" aria-label="Informações do curso">
             <li>{PRODUCT.accessDuration} de acesso</li>
             <li>{PRODUCT.guaranteeDays} dias de garantia</li>
@@ -157,7 +157,7 @@ function Method() {
             <h2 id="method-title">Muito além da técnica: uma formação para a atuação profissional completa.</h2>
             <p>O Método Vistoria 360 foi criado para organizar, em uma única jornada, tudo o que um engenheiro ou arquiteto precisa aprender para atuar com vistoria de imóvel novo.</p>
             <p>O objetivo não é formar alguém que apenas encontre defeitos. É formar um profissional capaz de compreender, conduzir, executar e transformar esse serviço em uma atuação sustentável.</p>
-            <CTA className="method-button">Quero dominar essa atuação</CTA>
+            <CTA href="#investimento" eventName="offer_view_click" className="method-button">Quero dominar essa atuação</CTA>
           </div>
           <div className="pillar-map" aria-label="Os oito pilares do Método Vistoria 360">
             <div className="pillar-map__center"><strong>360°</strong><span>atuação<br />completa</span></div>
