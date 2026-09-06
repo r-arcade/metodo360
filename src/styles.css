@@ -448,12 +448,11 @@ h3 { letter-spacing: -0.02em; }
 .pricing-card__installments { margin: 24px 0; padding: 17px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
 .pricing-card__installments strong { color: var(--ink); }
 .pricing-button { width: 100%; }
-.checkout-pending { display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 17px; color: var(--forest); font-size: .67rem; line-height: 1.4; text-align: left; }
-.checkout-pending svg { width: 20px; flex: 0 0 auto; fill: none; stroke: var(--forest); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.4; }
-.checkout-pending small { color: var(--muted); }
+.checkout-security { display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 17px; color: var(--forest); font-size: .67rem; line-height: 1.4; text-align: left; }
+.checkout-security svg { width: 20px; flex: 0 0 auto; fill: none; stroke: var(--forest); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.4; }
+.checkout-security small { color: var(--muted); }
 .pricing-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; padding: 20px 0; margin: 22px 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); font-size: .61rem; list-style: none; }
 .pricing-meta li::before { content: '•'; margin-right: 6px; color: var(--gold); }
-.pricing-note { margin: 17px 0 0; color: var(--muted); font-size: .6rem; line-height: 1.5; text-align: center; }
 
 .guarantee-grid { display: grid; gap: 40px; align-items: center; }
 .guarantee-seal { position: relative; display: grid; width: 180px; aspect-ratio: 1; place-content: center; justify-items: center; margin-inline: auto; border: 1px solid rgba(22,58,54,.2); border-radius: 50%; color: var(--forest); }
@@ -497,6 +496,7 @@ h3 { letter-spacing: -0.02em; }
 .footer-main { display: grid; gap: 26px; padding-bottom: 36px; border-bottom: 1px solid var(--line-light); }
 .footer-main > p { max-width: 460px; margin: 0; font-size: .78rem; }
 .footer-main nav { display: grid; gap: 10px; font-size: .7rem; }
+.footer-main nav a { overflow-wrap: anywhere; }
 .footer-main nav small { color: rgba(255,255,255,.3); }
 .footer-bottom { display: grid; gap: 8px; padding-top: 24px; }
 .footer-bottom p { margin: 0; font-size: .6rem; }

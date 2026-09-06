@@ -386,12 +386,11 @@ function Offer() {
             <div className="pricing-card__price"><span>Investimento</span><strong>{PRODUCT.price}</strong><small>à vista</small></div>
             <p className="pricing-card__installments">ou <strong>{PRODUCT.installments}</strong></p>
             <CTA variant="dark" className="pricing-button">Quero entrar para o método</CTA>
-            <div className="checkout-pending" role="note">
+            <div className="checkout-security" role="note">
               <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 2 3 5v5c0 4.2 2.8 6.8 7 8 4.2-1.2 7-3.8 7-8V5l-7-3Z" /><path d="m7 10 2 2 4-4" /></svg>
-              <span>Pagamento seguro via Hotmart<br /><small>Link definitivo do checkout pendente</small></span>
+              <span>Pagamento seguro via Hotmart<br /><small>Pix ou cartão</small></span>
             </div>
             <ul className="pricing-meta"><li>{PRODUCT.accessDuration} de acesso</li><li>{PRODUCT.guaranteeDays} dias de garantia</li><li>Suporte ao aluno</li></ul>
-            <p className="pricing-note">A condição de parcelamento deve ser confirmada no checkout final antes da publicação.</p>
           </aside>
         </div>
       </Container>

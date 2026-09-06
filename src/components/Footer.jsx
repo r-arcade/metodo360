@@ -1,5 +1,6 @@
 import { Brand } from './Header'
 import { Container } from './UI'
+import { PRODUCT } from '../config'
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
           <nav aria-label="Links institucionais">
             <span>Política de privacidade <small>(pendente)</small></span>
             <span>Termos de uso <small>(pendente)</small></span>
-            <span>Contato <small>(pendente)</small></span>
+            <a href={`mailto:${PRODUCT.supportEmail}`}>Suporte: {PRODUCT.supportEmail}</a>
           </nav>
         </div>
         <div className="footer-bottom">
